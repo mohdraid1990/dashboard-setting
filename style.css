@@ -551,7 +551,7 @@ form .img-form img {
 }
 
 /* Медиа-запрос для экранов шириной до 425px */
-@media (max-width: 425px) {
+@media (max-width: 450px) {
   .container {
     width: 350px !important; /* Ширина контейнера */
   }
@@ -657,7 +657,7 @@ form .img-form img {
     gap: 30px; /* Промежуток между элементами */
   }
   .btn {
-    top: 161% !important; /* Положение кнопки */
+    top: 150% !important; /* Положение кнопки */
     right: 24% !important; /* Положение кнопки */
   }
   .btn button {
@@ -667,7 +667,7 @@ form .img-form img {
 }
 
 /* Медиа-запрос для экранов шириной до 375px */
-@media (max-width: 375px) {
+@media (max-width: 390px) {
   .btn {
     top: 161% !important; /* Положение кнопки */
     right: 14% !important; /* Положение кнопки */
