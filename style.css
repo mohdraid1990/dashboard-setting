@@ -108,6 +108,8 @@ header {
   align-items: center; /* Выравнивание по центру */
   justify-content: space-between; /* Распределение пространства */
   padding: 10px; /* Отступы */
+  border-bottom: 1px solid #E6EFF5;
+
 }
 
 nav {
@@ -431,11 +433,13 @@ form .img-form img {
   transform: translateY(-50%) rotate(0deg); /* Вернуть стрелку в исходное положение */
 }
 
+
 .btn {
-  position: absolute; /* Абсолютное позиционирование */
-  top: 72%; /* Положение сверху */
-  right: 13%; /* Положение справа */
-}
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  align-items: center;
+ }
 
 .btn button {
   width: 190px; /* Ширина кнопки */
@@ -468,13 +472,15 @@ form .img-form img {
     padding: 0 !important; /* Убираем отступы у группы форм */
   }
   .btn {
-    top: 171% !important; /* Положение кнопки */
-    right: 18% !important; /* Положение кнопки */
+    justify-content: center !important;
+
+    align-items: center !important;
+
+    width: auto;
+    height: auto;
   }
-  .btn button {
-    width: 432px; /* Ширина кнопки */
-    height: 54px; /* Высота кнопки */
-  }
+
+ 
   side-bar .logo h1 {
     font-size: 20px !important; /* Размер шрифта для логотипа */
   }
@@ -525,13 +531,7 @@ form .img-form img {
   }
 }
 
-/* Медиа-запрос для экранов шириной от 900px до 1024px */
-@media (min-width: 900px) and (max-width: 1024px) {
-  .btn {
-    top: 171% !important; /* Положение кнопки */
-    right: 25% !important; /* Положение кнопки */
-  }
-}
+
 
 /* Медиа-запрос для экранов шириной до 1440px */
 @media (max-width: 1440px) {
@@ -541,31 +541,33 @@ form .img-form img {
   header {
     padding: 0; /* Убираем отступы у заголовка */
   }
-  .btn {
-    top: 76%; /* Положение кнопки */
-    right: 3%; /* Положение кнопки */
-  }
+ 
   .line {
     width: 550px; /* Ширина линии */
   }
+  .btn {
+    justify-content: flex-end;
+    width: auto;
+    height: auto;
+}
 }
 
 /* Медиа-запрос для экранов шириной до 425px */
 @media (max-width: 450px) {
   .container {
-    width: 350px !important; /* Ширина контейнера */
+    width: 325px !important; /* Ширина контейнера */
   }
+ 
   main {
-    grid-column: span 1 / span 1; /* Занимает 1 колонку */
-    height: 100%; /* Высота на весь экран */
-    grid-column-start: 2; /* Начало со 2 колонки */
-    grid-row-start: 2; /* Начало со 2 строки */
-    background-color: var(--white-color); /* Цвет фона основного контента */
-    margin: 7px; /* Отступы */
-    border-radius: 10px; /* Скругление углов */
-    width: 325px; /* Ширина основного контента */
-    padding: 10px; /* Отступы */
-    margin-top: 30px; /* Отступ сверху */
+    grid-column: span 1 / span 1;                   /* Занимает 1 колонку */
+    height: 100%;                                 /* Высота на весь экран */
+    grid-column-start: 2;                         /* Начало со 2 колонки */
+    grid-row-start: 2;                           /* Начало со 2 строки */
+    background-color:  var(--white-color);           /* Цвет фона основного контента */                                    /* Отступы */
+    border-radius: 10px;                        /* Скругление углов */
+                                /* Ширина основного контента */
+    padding: 10px;                           /* Отступы */
+    margin-top: 30px;                 /* Отступ сверху */
   }
   .line {
     width: 285px; /* Ширина линии */
@@ -657,9 +659,13 @@ form .img-form img {
     gap: 30px; /* Промежуток между элементами */
   }
   .btn {
-    top: 150% !important; /* Положение кнопки */
-    right: 24% !important; /* Положение кнопки */
-  }
+    display: flex;
+    padding-top: 30px;
+    justify-content: center;
+    align-items: center;
+    width: auto; /* Ширина кнопки */
+    height: auto; /* Высота кнопки */
+}
   .btn button {
     width: 285px; /* Ширина кнопки */
     height: 40px; /* Высота кнопки */
@@ -668,10 +674,7 @@ form .img-form img {
 
 /* Медиа-запрос для экранов шириной до 375px */
 @media (max-width: 390px) {
-  .btn {
-    top: 161% !important; /* Положение кнопки */
-    right: 14% !important; /* Положение кнопки */
-  }
+ 
 }
 
 /* Медиа-запрос для экранов шириной до 325px */
