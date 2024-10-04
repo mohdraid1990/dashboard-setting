@@ -1,0 +1,685 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:wght@100..900&display=swap");
+
+/* Основные цвета */
+:root {
+  --primary-color: #343C6A; /* Основной цвет */
+  --secondary-color: #1814F3; /* Вторичный цвет */
+  --background-color: #F5F7FA; /* Цвет фона */
+  --text-color: #8BA3CB; /* Цвет текста */
+  --border-color:#E6EFF5; /* Цвет границы */
+  --link-color: #B1B1B1; /* Цвет ссылки */
+  --white-color:#FFFFFF; /* Белый цвет */
+  --place-holder-color:#718EBF; /* Цвет плейсхолдера */
+}
+
+/* Основные стили для body */
+body {
+  padding: 0; /* Убираем отступы */
+  margin: 0; /* Убираем поля */
+  box-sizing: border-box; /* Устанавливаем box-sizing */
+  display: grid; /* Используем сетку */
+  grid-template-columns: repeat(12, 1fr); /* Определяем 12 колонок */
+  grid-template-rows: repeat(6, 1fr); /* Определяем 6 строк */
+  gap: 0px; /* Устанавливаем промежутки между элементами */
+  height: 100vh; /* Высота на весь экран */
+  font-family: "Montserrat", "Inter", sans-serif; /* Шрифты */
+  font-optical-sizing: auto; /* Автоматический оптический размер шрифта */
+  background-color: var(--background-color); /* Цвет фона */
+}
+
+a {
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+}
+
+ul {
+    list-style: none; /* Убираем маркеры у списков */
+}
+
+side-bar {
+  grid-row: span 6 / span 6; /* Занимает 6 строк */
+  border-right: 1px solid var(--border-color); /* Правая граница */
+}
+
+side-bar .logo {
+    display: flex; /* Используем flexbox */
+    padding: 20px; /* Отступы */
+    align-items: center; /* Выравнивание по центру */
+    justify-content: center; /* Выравнивание по центру */
+    gap: 10px; /* Промежуток между элементами */
+    margin-top: 28px; /* Отступ сверху */
+}
+
+side-bar .logo h1 {
+    font-family: Mont; /* Шрифт для заголовка */
+    font-size: 25px; /* Размер шрифта */
+    font-weight: 900; /* Жирность шрифта */
+    line-height: 31.95px; /* Высота строки */
+    color: var(--primary-color); /* Цвет заголовка */
+}
+
+.list {
+  width: 211px; /* Ширина списка */
+  height: 555px; /* Высота списка */
+  display: flex; /* Используем flexbox */
+  flex-wrap: wrap; /* Перенос элементов */
+  align-items: center; /* Выравнивание по центру */
+}
+
+.list li a {
+  padding: 5px; /* Отступы */
+  display: flex; /* Используем flexbox */
+  gap: 20px; /* Промежуток между элементами */
+  font-family: Inter; /* Шрифт для ссылок */
+  font-size: 18px; /* Размер шрифта */
+  font-weight: 500; /* Жирность шрифта */
+  line-height: 21.78px; /* Высота строки */
+  color: var(--link-color); /* Цвет ссылки */
+  align-items: center; /* Выравнивание по центру */
+  position: relative; /* Позиционирование */
+}
+
+.list li a.active {
+  color: var(--secondary-color); /* Цвет активной ссылки */
+}
+
+.list li a.active::before {
+  content: ''; /* Псевдоэлемент перед активной ссылкой */
+  position: absolute; /* Абсолютное позиционирование */
+  left: -35%; /* Сдвиг влево */
+  top: 50%; /* Вертикальное выравнивание */
+  transform: translateY(-50%); /* Центрирование по вертикали */
+  width: 6px; /* Ширина псевдоэлемента */
+  height: 60px; /* Высота псевдоэлемента */
+  background-color: var(--secondary-color); /* Цвет псевдоэлемента */
+  border-radius: 0px 10px 10px 0px; /* Скругление углов */
+  opacity: 1; /* Непрозрачность */
+}
+
+.container {
+  width: 1600px; /* Ширина контейнера */
+  margin: 0 auto; /* Центрирование контейнера */
+}
+
+header {
+  grid-column: span 11 / span 11; /* Занимает 11 колонок */
+  background-color: var(--white-color); /* Цвет фона заголовка */
+  height: 100px; /* Высота заголовка */
+  display: flex; /* Используем flexbox */
+  align-items: center; /* Выравнивание по центру */
+  justify-content: space-between; /* Распределение пространства */
+  padding: 10px; /* Отступы */
+}
+
+nav {
+  width: 100%; /* Ширина навигации */
+  display: flex; /* Используем flexbox */
+  justify-content: space-between; /* Распределение пространства */
+  align-items: center; /* Выравнивание по центру */
+  height: 60px; /* Высота навигации */
+}
+
+.setting p {
+  font-family: Inter; /* Шрифт для текста настроек */
+  font-size: 28px; /* Размер шрифта */
+  font-weight: 600; /* Жирность шрифта */
+  line-height: 33.89px; /* Высота строки */
+  color: var(--primary-color); /* Цвет текста */
+}
+
+.info {
+  display: flex; /* Используем flexbox */
+  align-items: center; /* Выравнивание по центру */
+  justify-content: center; /* Выравнивание по центру */
+  gap: 20px; /* Промежуток между элементами */
+}
+
+.search-inp {
+  position: relative; /* Относительное позиционирование */
+  display: flex; /* Используем flexbox */
+  justify-content: center; /* Выравнивание по центру */
+  width: 255px; /* Ширина поля поиска */
+  height: 50px; /* Высота поля поиска */
+  background-color: var(--background-color); /* Цвет фона поля поиска */
+  border-radius: 40px; /* Скругление углов */
+  padding: 5px; /* Отступы */
+  align-items: center; /* Выравнивание по центру */
+}
+
+.search-inp img {
+  margin-top: 3px; /* Отступ сверху */
+  margin-left: 24px; /* Отступ слева */
+  width: 20px; /* Ширина изображения */
+  height: 20px; /* Высота изображения */
+}
+
+.search-inp input {
+  border: none; /* Убираем границу */
+  outline: none; /* Убираем обводку */
+  flex: 1; /* Занимает оставшееся пространство */
+  text-align: right; /* Выравнивание текста вправо */
+  font-size: 16px; /* Размер шрифта */
+  background: none; /* Убираем фон */
+  font-family: Inter; /* Шрифт для ввода */
+  font-size: 15px; /* Размер шрифта */
+  font-weight: 400; /* Жирность шрифта */
+  line-height: 18.15px; /* Высота строки */
+  color: var(--text-color); /* Цвет текста */
+  width: 152px; /* Ширина поля ввода */
+  height: 18px; /* Высота поля ввода */
+  text-align: center; /* Выравнивание текста по центру */
+}
+
+.search-inp input::placeholder {
+  font-family: Inter; /* Шрифт для плейсхолдера */
+  font-size: 15px; /* Размер шрифта */
+  font-weight: 400; /* Жирность шрифта */
+  line-height: 18.15px; /* Высота строки */
+  color: var(--text-color); /* Цвет плейсхолдера */
+}
+
+.setting-info {
+  width: 50px; /* Ширина элемента настроек */
+  height: 50px; /* Высота элемента настроек */
+  background-color: var(--background-color); /* Цвет фона элемента настроек */
+  border-radius: 50%; /* Скругление углов */
+  display: flex; /* Используем flexbox */
+  align-items: center; /* Выравнивание по центру */
+  justify-content: center; /* Выравнивание по центру */
+  cursor: pointer; /* Указатель курсора */
+}
+
+.info .setting-info:last-child img {
+  border-radius: 50%; /* Скругление углов изображения */
+  width: 60px; /* Ширина изображения */
+  height: 60px; /* Высота изображения */
+}
+
+
+.menu {display: none;}
+.info-mobile {display: none;}
+.search-inp-mobile {display: none;};
+.info-mobile  img {display: none;};
+
+
+.menu {
+  display: none;
+}
+
+
+#closeIcon {
+  display: none; /* Скрываем иконку закрытия */
+  cursor: pointer; /* Указатель курсора */
+  position: absolute; /* Абсолютное позиционирование */
+  z-index: 1000; /* Уровень слоя */
+  top: 10px; /* Отступ сверху */
+  left: 159px; /* Отступ слева */
+}
+
+#closeIcon img {
+  width: 25px; /* Ширина изображения иконки закрытия */
+}
+
+#menuIcon {
+  cursor: pointer; /* Указатель курсора */
+}
+
+#sidebar.visible #closeIcon {
+  display: block; /* Показываем иконку закрытия при видимости боковой панели */
+}
+
+#closeIcon {
+  display: none; /* Скрываем иконку закрытия */
+  cursor: pointer; /* Указатель курсора */
+  position: absolute; /* Абсолютное позиционирование */
+  z-index: 1000; /* Уровень слоя */
+  top: 10px; /* Отступ сверху */
+  left: 159px; /* Отступ слева */
+  transition: transform 0.5s ease; /* Плавный переход при изменении */
+}
+
+#closeIcon.rotate {
+  transform: rotate(180deg); /* Поворот иконки закрытия */
+}
+
+#menuIcon {
+  cursor: pointer; /* Указатель курсора */
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%); /* Начальное положение для анимации */
+    opacity: 0; /* Начальная непрозрачность */
+  }
+  to {
+    transform: translateX(0); /* Конечное положение для анимации */
+    opacity: 1; /* Конечная непрозрачность */
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0); /* Начальное положение для анимации */
+    opacity: 1; /* Начальная непрозрачность */
+  }
+  to {
+    transform: translateX(-100%); /* Конечное положение для анимации */
+    opacity: 0; /* Конечная непрозрачность */
+  }
+}
+
+#sidebar.visible {
+  animation: slideIn 0.5s forwards; /* Анимация появления боковой панели */
+}
+
+#sidebar.hidden {
+  animation: slideOut 0.5s forwards; /* Анимация скрытия боковой панели */
+}
+
+main {
+  grid-column: span 11 / span 11; /* Занимает 11 колонок */
+  height: 100%; /* Высота на весь экран */
+  grid-column-start: 2; /* Начало с 2 колонки */
+  grid-row-start: 2; /* Начало со 2 строки */
+  background-color: var(--white-color); /* Цвет фона основного контента */
+  margin: 10px; /* Отступы */
+  border-radius: 10px; /* Скругление углов */
+  padding: 20px; /* Отступы */
+}
+
+main .link-main {
+  display: flex; /* Используем flexbox */
+  align-items: center; /* Выравнивание по центру */
+  gap: 60px; /* Промежуток между элементами */
+}
+
+.link-main a {
+  color: var(p); /* Цвет ссылки */
+  font-family: Inter; /* Шрифт для ссылок */
+  font-size: 16px; /* Размер шрифта */
+  font-weight: 500; /* Жирность шрифта */
+  line-height: 19.36px; /* Высота строки */
+  position: relative; /* Позиционирование */
+  transition: color 0.3s ease-in-out; /* Плавный переход цвета текста */
+}
+
+.link-main a:hover::before {
+  content: ""; /* Псевдоэлемент при наведении */
+  height: 3px; /* Высота псевдоэлемента */
+  width: 114px; /* Ширина псевдоэлемента */
+  background-color: var(--secondary-color); /* Цвет псевдоэлемента при наведении */
+  position: absolute; /* Абсолютное позиционирование */
+  bottom: -17px; /* Положение снизу */
+  left: -13px; /* Положение слева */
+  transition: width 0.3s ease-in-out; /* Плавный переход ширины */
+}
+
+.line {
+  width: 1050px; /* Ширина линии */
+  height: 1px; /* Высота линии */
+  background-color: #F4F5F7; /* Цвет линии */
+  margin-left: 20px; /* Отступ слева */
+}
+
+form {
+  display: flex; /* Используем flexbox */
+  gap: 50px; /* Промежуток между элементами */
+  flex-wrap: wrap; /* Перенос элементов */
+}
+
+form .img-form {
+  position: relative; /* Относительное позиционирование */
+  width: 130px; /* Ширина формы изображения */
+  height: 130px; /* Высота формы изображения */
+  margin-top: 50px; /* Отступ сверху */
+  margin-left: 32px; /* Отступ слева */
+}
+
+form .img-form img {
+  border-radius: 50%; /* Скругление углов изображения */
+}
+
+.pen {
+  position: absolute; /* Абсолютное позиционирование */
+  background-color: var(--secondary-color); /* Цвет фона */
+  width: 30px; /* Ширина элемента */
+  height: 30px; /* Высота элемента */
+  border-radius: 50%; /* Скругление углов */
+  display: flex; /* Используем flexbox */
+  align-items: center; /* Выравнивание по центру */
+  justify-content: center; /* Выравнивание по центру */
+  top: 66%; /* Положение сверху */
+  right: 0%; /* Положение справа */
+  cursor: pointer; /* Указатель курсора */
+}
+
+.form-group {
+  padding-top: 20px; /* Отступ сверху */
+  display: flex; /* Используем flexbox */
+  align-items: center; /* Выравнивание по центру */
+  justify-content: center; /* Выравнивание по центру */
+  flex-wrap: wrap; /* Перенос элементов */
+  gap: 20px; /* Промежуток между элементами */
+  padding-left: 10px; /* Отступ слева */
+}
+
+.name {
+  display: flex; /* Используем flexbox */
+  flex-direction: column; /* Вертикальная ориентация */
+  gap: 10px; /* Промежуток между элементами */
+}
+
+.name label {
+  font-family: Inter, sans-serif; /* Шрифт для меток */
+  font-size: 16px; /* Размер шрифта */
+  font-weight: 400; /* Жирность шрифта */
+  line-height: 19.36px; /* Высота строки */
+  color: #232323; /* Цвет текста */
+  padding-top: 20px; /* Отступ сверху */
+}
+
+.name input,
+.name select {
+  width: 418px; /* Ширина полей ввода */
+  height: 50px; /* Высота полей ввода */
+  border-radius: 15px; /* Скругление углов */
+  outline: none; /* Убираем обводку */
+  appearance: none; /* Убираем стандартный стиль */
+  padding-left: 10px; /* Отступ слева */
+  border: 1px solid #DFEAF2; /* Граница */
+}
+
+.name input::placeholder {
+  font-family: Inter, sans-serif; /* Шрифт для плейсхолдера */
+  font-size: 15px; /* Размер шрифта */
+  font-weight: 400; /* Жирность шрифта */
+  line-height: 18.15px; /* Высота строки */
+  padding: 20px; /* Отступы */
+  color: var(--place-holder-color); /* Цвет плейсхолдера */
+}
+
+.select-container {
+  position: relative; /* Относительное позиционирование */
+  display: inline-block; /* Встраиваемый блок */
+}
+
+#dob {
+  appearance: none; /* Убираем стандартный стиль */
+  font-family: Inter, sans-serif; /* Шрифт для поля выбора */
+  font-size: 15px; /* Размер шрифта */
+  font-weight: 400; /* Жирность шрифта */
+  line-height: 18.15px; /* Высота строки */
+  color: var(--place-holder-color); /* Цвет текста */
+  cursor: pointer; /* Указатель курсора */
+  padding-left: 20px; /* Отступ слева */
+}
+
+#arrow-icon {
+  position: absolute; /* Абсолютное позиционирование */
+  right: 30px; /* Положение справа */
+  top: 50%; /* Вертикальное выравнивание */
+  transform: translateY(-50%); /* Центрирование по вертикали */
+  transition: transform 0.3s ease; /* Плавный переход при изменении */
+  pointer-events: none; /* Игнорировать события указателя */
+}
+
+
+.select-container:focus-within #arrow-icon {
+  transform: translateY(-50%) rotate(180deg); /* Поворот стрелки при фокусе */
+}
+
+.select-container:not(:focus-within) #arrow-icon {
+  transform: translateY(-50%) rotate(0deg); /* Вернуть стрелку в исходное положение */
+}
+
+.btn {
+  position: absolute; /* Абсолютное позиционирование */
+  top: 72%; /* Положение сверху */
+  right: 13%; /* Положение справа */
+}
+
+.btn button {
+  width: 190px; /* Ширина кнопки */
+  height: 50px; /* Высота кнопки */
+  background-color: var(--secondary-color); /* Цвет фона кнопки */
+  border: none; /* Убираем границу */
+  border-radius: 20px; /* Скругление углов кнопки */
+  color: var(--white-color); /* Цвет текста кнопки */
+  font-family: Inter; /* Шрифт для текста кнопки */
+  font-size: 18px; /* Размер шрифта */
+  font-weight: 500; /* Жирность шрифта */
+  line-height: 21.78px; /* Высота строки */
+  text-align: center; /* Выравнивание текста по центру */
+  cursor: pointer; /* Указатель курсора */
+}
+
+/* Медиа-запрос для экранов шириной до 1024px */
+@media (max-width: 1024px) {
+  .container {
+    width: 650px !important; /* Ширина контейнера */
+  }
+  nav {
+    justify-content: space-around; /* Распределение элементов навигации */
+  }
+  form .img-form {
+    left: 32%; /* Положение формы изображения */
+    margin-top: 60px; /* Отступ сверху */
+  }
+  .form-group {
+    padding: 0 !important; /* Убираем отступы у группы форм */
+  }
+  .btn {
+    top: 171% !important; /* Положение кнопки */
+    right: 18% !important; /* Положение кнопки */
+  }
+  .btn button {
+    width: 432px; /* Ширина кнопки */
+    height: 54px; /* Высота кнопки */
+  }
+  side-bar .logo h1 {
+    font-size: 20px !important; /* Размер шрифта для логотипа */
+  }
+  .list {
+    margin-top: 5px !important; /* Отступ сверху для списка */
+  }
+  .list li a {
+    font-size: 15px !important; /* Размер шрифта для ссылок в списке */
+  }
+  .menu {
+    display: block; /* Показываем меню */
+    margin-left: 100px; /* Отступ слева */
+    cursor: pointer; /* Указатель курсора */
+    margin-top: 9px; /* Отступ сверху */
+  }
+  #closeIcon {
+    left: 60px; /* Положение иконки закрытия */
+  }
+  side-bar {
+    display: none; /* Скрываем боковую панель */
+  }
+  header {
+    grid-column: span 12 / span 10; /* Заголовок занимает 10 колонок */
+  }
+  .setting {
+    margin-left: 30px; /* Отступ слева для настроек */
+  }
+  #sidebar.hidden {
+    display: none; /* Скрываем боковую панель, если она скрыта */
+  }
+  .list {
+    width: 165px; /* Ширина списка */
+    height: 555px; /* Высота списка */
+    display: flex; /* Используем flexbox */
+    flex-wrap: wrap; /* Перенос элементов */
+    align-items: center; /* Выравнивание по центру */
+    margin-top: 90px; /* Отступ сверху */
+  }
+  side-bar .logo {
+    margin-top: 80px; /* Отступ сверху для логотипа */
+  }
+  #sidebar.visible {
+    display: block; /* Показываем боковую панель, если она видима */
+    position: absolute; /* Абсолютное позиционирование */
+    z-index: 1000; /* Уровень слоя */
+    background-color: var(--white-color); /* Цвет фона боковой панели */
+    height: 100%; /* Высота на весь экран */
+  }
+}
+
+/* Медиа-запрос для экранов шириной от 900px до 1024px */
+@media (min-width: 900px) and (max-width: 1024px) {
+  .btn {
+    top: 171% !important; /* Положение кнопки */
+    right: 25% !important; /* Положение кнопки */
+  }
+}
+
+/* Медиа-запрос для экранов шириной до 1440px */
+@media (max-width: 1440px) {
+  .container {
+    width: 1110px; /* Ширина контейнера */
+  }
+  header {
+    padding: 0; /* Убираем отступы у заголовка */
+  }
+  .btn {
+    top: 76%; /* Положение кнопки */
+    right: 3%; /* Положение кнопки */
+  }
+  .line {
+    width: 550px; /* Ширина линии */
+  }
+}
+
+/* Медиа-запрос для экранов шириной до 425px */
+@media (max-width: 425px) {
+  .container {
+    width: 350px !important; /* Ширина контейнера */
+  }
+  main {
+    grid-column: span 1 / span 1; /* Занимает 1 колонку */
+    height: 100%; /* Высота на весь экран */
+    grid-column-start: 2; /* Начало со 2 колонки */
+    grid-row-start: 2; /* Начало со 2 строки */
+    background-color: var(--white-color); /* Цвет фона основного контента */
+    margin: 7px; /* Отступы */
+    border-radius: 10px; /* Скругление углов */
+    width: 325px; /* Ширина основного контента */
+    padding: 10px; /* Отступы */
+    margin-top: 30px; /* Отступ сверху */
+  }
+  .line {
+    width: 285px; /* Ширина линии */
+  }
+  form .img-form {
+    left: 20%; /* Положение формы изображения */
+    margin-top: 18px; /* Отступ сверху */
+  }
+  header {
+    height: 140px; /* Высота заголовка */
+  }
+  .info {
+    display: none; /* Скрываем информацию */
+  }
+  nav {
+    margin-bottom: 45px; /* Отступ снизу для навигации */
+  }
+  .menu {
+    margin-bottom: 50px; /* Отступ снизу для меню */
+    margin-left: 29px; /* Отступ слева для меню */
+  }
+  .search-inp-mobile {
+    display: block; /* Показываем мобильное поле поиска */
+    position: absolute; /* Абсолютное позиционирование */
+    top: 8%; /* Положение сверху */
+    left: 5%; /* Положение слева */
+  }
+  #closeIcon {
+    left: 143px; /* Положение иконки закрытия */
+  }
+  .search-inp-mobile input {
+    width: 325px; /* Ширина поля ввода */
+    height: 40px; /* Высота поля ввода */
+    border: none; /* Убираем границу */
+    outline: none; /* Убираем обводку */
+    border-radius: 40px; /* Скругление углов */
+    background-color: var(--background-color); /* Цвет фона поля ввода */
+    display: flex; /* Используем flexbox */
+    justify-content: center; /* Выравнивание по центру */
+    padding: 5px; /* Отступы */
+    align-items: center; /* Выравнивание по центру */
+  }
+  .search-inp-mobile img {
+    margin-bottom: -33px; /* Отступ снизу для изображения */
+    margin-left: 18px; /* Отступ слева для изображения */
+    width: 16px; /* Ширина изображения */
+    height: 16px; /* Высота изображения */
+  }
+  .search-inp-mobile input::placeholder {
+    font-family: Inter; /* Шрифт для плейсхолдера */
+    font-size: 13px; /* Размер шрифта */
+    font-weight: 400; /* Жирность шрифта */
+    line-height: 15.73px; /* Высота строки */
+    color: var(--text-color); /* Цвет плейсхолдера */
+    padding: 50px; /* Отступы */
+  }
+  .setting p {
+    font-family: Inter; /* Шрифт для текста настроек */
+    font-size: 20px; /* Размер шрифта */
+    font-weight: 600; /* Жирность шрифта */
+    line-height: 24.2px; /* Высота строки */
+    text-align: center; /* Выравнивание текста по центру */
+  }
+  .info-mobile img {
+    width: 35px; /* Ширина изображения мобильной информации */
+    height: 35px; /* Высота изображения мобильной информации */
+    border-radius: 50%; /* Скругление углов изображения */
+  }
+  .list {
+    margin-top: 10px; /* Отступ сверху для списка */
+  }
+  .list li a {
+    font-size: 15px; /* Размер шрифта для ссылок в списке */
+  }
+  .info-mobile {
+    display: block; /* Показываем мобильную информацию */
+  }
+  .name input, .name select {
+    width: 280px; /* Ширина полей ввода и выбора */
+    height: 40px; /* Высота полей ввода и выбора */
+  }
+  .link-main a {
+    font-family: Inter; /* Шрифт для ссылок */
+    font-size: 13px; /* Размер шрифта */
+    font-weight: 500; /* Жирность шрифта */
+    line-height: 15.73px; /* Высота строки */
+  }
+  main .link-main {
+    gap: 30px; /* Промежуток между элементами */
+  }
+  .btn {
+    top: 161% !important; /* Положение кнопки */
+    right: 24% !important; /* Положение кнопки */
+  }
+  .btn button {
+    width: 285px; /* Ширина кнопки */
+    height: 40px; /* Высота кнопки */
+  }
+}
+
+/* Медиа-запрос для экранов шириной до 375px */
+@media (max-width: 375px) {
+  .btn {
+    top: 161% !important; /* Положение кнопки */
+    right: 14% !important; /* Положение кнопки */
+  }
+}
+
+/* Медиа-запрос для экранов шириной до 325px */
+@media (max-width: 325px) {
+  .search-inp-mobile input {
+    width: 287px; /* Ширина поля ввода для мобильного поиска */
+  }
+  .btn {
+    right: 0% !important; /* Положение кнопки */
+  }
+}

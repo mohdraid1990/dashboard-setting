@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>BankDash</title> <!-- Заголовок страницы -->
+  </head>
+  <body>
+    <side-bar id="sidebar"> <!-- Боковая панель -->
+      <div class="logo">
+        <img src="images/logo.svg" alt="#" />
+        <h1>BankDash.</h1> <!-- Название сайта -->
+      </div>
+      <ul class="list">
+        <li>
+          <a href="#"><img src="images/home 2.svg" alt="" /> Dashboard</a> <!-- Панель управления -->
+        </li>
+        <li>
+          <a href="#"
+            ><img src="images/transfer 1.svg" alt="" /> Transactions
+          </a> <!-- Транзакции -->
+        </li>
+        <li>
+          <a href="#"><img src="images/user 3 1.svg" alt="" /> Accounts </a> <!-- Учетные записи -->
+        </li>
+        <li>
+          <a href="#"
+            ><img src="images/economic-investment 1.svg" alt="" /> Investments
+          </a> <!-- Инвестиции -->
+        </li>
+        <li>
+          <a href="#"
+            ><img src="images/credit-card 1.svg" alt="" /> Credit Cards
+          </a> <!-- Кредитные карты -->
+        </li>
+        <li>
+          <a href="#"><img src="images/loan 1.svg" alt="" /> Loans </a> <!-- Кредиты -->
+        </li>
+        <li>
+          <a href="#"><img src="images/service 1.svg" alt="" /> Services </a> <!-- Услуги -->
+        </li>
+        <li>
+          <a href="#"
+            ><img src="images/econometrics 1.svg" alt="" /> My Privileges
+          </a> <!-- Мои привилегии -->
+        </li>
+        <li>
+          <a href="#" class="active"
+            ><img src="images/settings solid 1.svg" alt="" /> Setting
+          </a> <!-- Настройки -->
+        </li>
+      </ul>
+    </side-bar>
+    <header>
+        <div class="menu" id="menuIcon"> <!-- Иконка меню -->
+            <img src="images/menu.svg" alt="" />
+          </div>
+          <div class="menu close" id="closeIcon" style="display: none;"> <!-- Иконка закрытия -->
+            <img src="images/close.svg" alt="close" />
+          </div>
+      <div class="container">
+        <nav>
+          <div class="setting">
+            <p>Setting</p> <!-- Настройки -->
+          </div>
+          <div class="info">
+            <div class="search-inp"> <!-- Поле поиска -->
+              <img src="images/magnifying-glass 1.svg" alt="#input" />
+              <input type="search" placeholder="Search for something" /> <!-- Поиск -->
+            </div>
+            <div class="setting-info">
+              <img src="images/settings 1.svg" alt="#" />
+            </div>
+            <div class="setting-info">
+              <img src="images/002-notification-1.svg" alt="#" />
+            </div>
+            <div class="setting-info">
+              <img
+                src="images/pexels-christina-morillo-1181690 1.svg"
+                alt="#"
+              />
+            </div>
+          </div>
+          <div class="search-inp-mobile"> <!-- Мобильное поле поиска -->
+            <img src="images/magnifying-glass 1.svg" alt="#input" />
+            <input type="search" placeholder="Search for something" />
+          </div>
+          <div class="info-mobile">
+            <img
+              src="images/pexels-christina-morillo-1181690 1.svg"
+              alt="#"
+            />
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+        <div class="container">
+            <ul class="link-main"> <!-- Основные ссылки -->
+                <li><a href="">Edit Profile</a></li> <!-- Редактировать профиль -->
+                <li><a href="">Preferences</a></li> <!-- Настройки -->
+                <li><a href="">Security</a></li> <!-- Безопасность -->
+            </ul>
+            <div class="line"></div>
+        </div>
+        <form action="">
+          <div class="img-form"> <!-- Форма изображения -->
+            <img src="images/pexels-christina-morillo-1181690 1.png" alt="#">
+            <div class="pen">
+                <img src="images/pencil-alt 1.svg" alt="">
+            </div>
+          </div>
+          <div class="form-group"> <!-- Группа форм -->
+              <div class="left"> <!-- Левая часть формы -->
+                <div class="name">
+                  <label for="Name">
+                      Your Name
+                  </label>
+                  <input type="text" placeholder="Charlene Reed "> <!-- Имя -->
+                  </div>
+                  <div class="name">
+                      <label for="Email">
+                        Email
+                      </label>
+                      <input type="text" placeholder="charlenereed@gmail.com  "> <!-- Электронная почта -->
+                      </div>
+                      <div class="name">
+                        <label for="dob">Date of Birth</label>
+                        <div class="select-container">
+                          <select id="dob"> <!-- Выбор даты рождения -->
+                            <option value="" disabled selected>25 January 1990</option>
+                            <option value="1990">1990</option>
+                            <option value="1991">1991</option>
+                            <option value="1992">1992</option>
+                            <option value="1993">1993</option>
+                            <option value="1994">1994</option>
+                          </select>
+                          <img id="arrow-icon" src="images/Vector 4.svg" alt="Arrow Icon"> <!-- Иконка стрелки -->
+                        </div>
+                      </div>
+                          <div class="name">
+                            <label for="Name">
+                              Permanent Address
+                            </label>
+                            <input type="text" placeholder="San Jose, California, USA "> <!-- Постоянный адрес -->
+                            </div>
+                            <div class="name">
+                              <label for="Name">
+                                Postal Code
+                              </label>
+                              <input type="text" placeholder="45962 "> <!-- Почтовый индекс -->
+                              </div>
+              </div>
+              <div class="right"> <!-- Правая часть формы -->
+                <div class="name">
+                  <label for="text">
+                  User Name
+                  </label>
+                  <input type="text" placeholder="Charlene Reed  "> <!-- Имя пользователя -->
+                  </div>
+                  <div class="name">
+                      <label for="Password">
+                        Password
+                      </label>
+                      <input type="password" placeholder="********** "> <!-- Пароль -->
+                      </div>
+                      <div class="name">
+                          <label for="text">
+                            Present Address
+                          </label>
+                          <input type="text" placeholder="San Jose, California, USA "> <!-- Текущий адрес -->
+                          </div>
+                          <div class="name">
+                            <label for="text">
+                              City
+                            </label>
+                            <input type="text" placeholder="San Jose "> <!-- Город -->
+                            </div>
+                            <div class="name">
+                              <label for="text">
+                                Country
+                              </label>
+                              <input type="text" placeholder="USA "> <!-- Страна -->
+                              </div>
+                              <div class="btn">
+                                <button type="submit">Save</button> <!-- Кнопка сохранения -->
+                              </div>
+              </div>
+          </div>
+        </form>
+    </main>
+    <script src="script.js"></script> <!-- Подключение скрипта -->
+  </body>
+</html>
